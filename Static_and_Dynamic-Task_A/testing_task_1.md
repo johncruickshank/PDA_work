@@ -12,7 +12,7 @@ def func1 val
   return false
   end
 end
-<!-- The argument, "val", should be in (brackets) for good practice.  "=" should be "==" -->
+<!-- The argument, "val", should be in (brackets) for good practice.  "=" should be "==" to compare the values rather than assign a new one. -->
 
 dif max a b
   if a > b
@@ -29,7 +29,7 @@ def looper
   puts i
   end
 end
-<!-- This function gives the numbers 1..10 on a new line each, means it's no real use, especially with how it's called later. -->
+<!-- This function gives the numbers 1..10 on a new line each, means it's no real use, especially with how it's called later.  Change to return with the end result being that 10 is returned. -->
 
 failures = 0
 
@@ -38,7 +38,7 @@ if looper == 10
 else
   puts "looper failed"
   failures = failures + 1
-  <!-- Looper is a function, not a variable.  No "end" to close function -->
+  <!-- When corrected, looper will return 10 so this should now run.  No "end" if statement. -->
 
 
 if func1(3) == false
@@ -64,6 +64,6 @@ if failures
 else
   puts "Test Passed"
 end
-<!-- No condition applied to "failures" so will always return true, will always get "Test Failed" -->
+<!-- No condition applied to "failures" so will always return true, will always get "Test Failed".  Change this to test if there are any failures in the tests above. -->
 
 ```

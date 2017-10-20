@@ -21,7 +21,9 @@ end
 
 def looper
   for i in (1..10)
-    puts i
+    if i == 10
+      return i
+    end
   end
 end
 
@@ -47,11 +49,11 @@ if max(100,1) == 100
   puts "max(100,1) passed"
 else
   puts "func1(3) failed"
-  failrues = failures + 1
+  failures = failures + 1
 end
 
 
-if failures
+if failures > 0
   puts "Test Failed"
 else
   puts "Test Passed"
